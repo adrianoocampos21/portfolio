@@ -139,7 +139,7 @@ section.topo-do-site .flex {
 
 .topo-do-site .img-topo-site{
     position: relative;
-    animation: flutuar 2s ease-in-out infinite alternate;
+    animation: flutuar 3s ease-in-out infinite alternate;
 }
 
 @keyframes flutuar {
@@ -147,7 +147,7 @@ section.topo-do-site .flex {
         top: 0;
     }
     100%{
-        top: 40px;
+        top: 50px;
     }
 }
 
