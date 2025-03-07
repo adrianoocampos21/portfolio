@@ -244,7 +244,7 @@ section.sobre .flex{
 
 /*ESTILO PORTFÓLIO*/
 section.projeto{
-    padding: 80px 4%;
+    padding: 60px 4% 120px 4%;
     box-shadow: inset 0 0 40px 10px #bfbebe4a;
 }
 
@@ -291,9 +291,9 @@ section.projeto .flex{
     opacity: 1;
 }
 
-/*ESTLO CONTATO*/
+/*ESTLO FORMULARIO*/
 section.formulario{
-    padding: 100px 4%;
+    padding: 60px 4% 120px 4%;
 }
 
 form{
@@ -351,3 +351,74 @@ form input[type=submit]{
     transition: .2s;
 }
 
+/* ESTILO FOOTER */
+
+footer{
+    padding: 20px 4%;
+    box-shadow: inset 0 0 40px 10px #bfbebe4a;
+}
+
+footer .flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .logo h1{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.2em;
+    font-family: "Passion one", "Poppins", helvetica;
+
+    color: #0066ff;
+    line-height: 1.03;
+}
+
+footer .logo span{
+    color: #424242;
+}
+
+footer .logo,footer .menu-desktop, footer .btn-social {
+    width: 200px;
+    padding: 10px 2%;
+}
+
+footer nav{
+    text-align: center;
+}
+
+footer nav ul{
+    list-style-type: none;
+}
+
+footer a{
+    color: #424242;
+    font-size: 1.0em;
+    font-weight: 300;
+    text-decoration: none;
+
+    /* display; inline-block; é necessário para usar a propriedade !trasnform! */
+    transition: .2s;
+}
+
+footer a:hover{
+    color: #0066ff;
+}
+
+
+footer .btn-social button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #00ccff;
+    font-size: 20px;
+
+    cursor: pointer;
+    margin: 2px 5px;
+    transition: .2s;
+}
+
+footer p{
+    color: #424242;
+}
