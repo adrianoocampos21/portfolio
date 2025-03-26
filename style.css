@@ -586,6 +586,11 @@ footer p{
     footer nav{
         display: none;
     }
+
+    footer .line-footer{
+        display: flex;
+        flex-direction: column;
+    }
     
 }
 
