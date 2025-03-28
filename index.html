@@ -9,6 +9,7 @@
     <!--BOOTSTRAP-->
 
     <link rel="stylesheet" href="style.css">
+    
     <title>Home |</title>
 </head>
 <body>
@@ -73,7 +74,7 @@
                         </div> <!-- btn-contato -->
 
                         <div class="btn-contato-mobile">
-                            <a href="https://wa.me/5551989472864" target="_blank">
+                            <a href="#contato" target="">
                                 <button>Entre em contato</button>
                             </a>
                         </div> <!--btn-button-mobile-->
@@ -193,14 +194,16 @@
 
                 <h2 class="titulo">Entre em <span>contato.</span></h2>
 
-                <form action="">
-                    <input type="text" name="" id="" placeholder="Nome" required>
-                    <input type="text" name="" id="" placeholder="Email" required>
-                    <input type="text" name="" id="" placeholder="Celular">
-                    <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
+                <form id="form" action="https://formsubmit.co/adrianoocampos874@gmail.com" method="POST">
 
+                    <input type="text" name="" id="nome" placeholder="Nome" required>
+                    <input type="text" name="" id="email" placeholder="Email" required>
+                    <input type="text" name="" id="tel" placeholder="Celular">
+                    <textarea name="" id="mensagem" placeholder="Sua mensagem" required></textarea>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_" value="https://adrianoocampos21.github.io/portfolio/">
                     <div class="btn-enviar">
-                        <input type="submit" value="Enviar">
+                        <input type="submit"></input>
                     </div>
                 </form>
             </div><!--interface-->
@@ -264,6 +267,8 @@
             </div><!--flex-->
         </div><!--interface-->
     </footer>
+
+    <script src="./script.js"></script>
 
 </body>
 </html>
