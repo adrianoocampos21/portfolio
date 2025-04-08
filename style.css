@@ -170,19 +170,19 @@ section.topo-do-site .flex {
     cursor: pointer;
 }
 
-/* .topo-do-site .img-topo-site{
+.topo-do-site .img-topo-site{
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
-} */
+}
 
-/* @keyframes flutuar {
+@keyframes flutuar {
     0%{
         top: 0;
     }
     100%{
         top: 40px;
     }
-} */
+} 
 
 
 /*ESTILO ESPECIALIDADES*/
@@ -661,8 +661,6 @@ footer .footer-p-mobile{
     width: 100%;
     height: 70px;
     background-color: #fff;
-    position: fixed;
-    top: 0;
     }
 
     header nav.menu-desktop{
