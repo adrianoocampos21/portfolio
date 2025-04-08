@@ -170,19 +170,19 @@ section.topo-do-site .flex {
     cursor: pointer;
 }
 
-.topo-do-site .img-topo-site{
+/* .topo-do-site .img-topo-site{
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
-}
+} */
 
-@keyframes flutuar {
+/* @keyframes flutuar {
     0%{
         top: 0;
     }
     100%{
         top: 40px;
     }
-}
+} */
 
 
 /*ESTILO ESPECIALIDADES*/
@@ -269,6 +269,63 @@ section.sobre .flex{
     transition: .2s;
 }
 
+/* TRABALHOS
+
+section .trabalho{
+    padding: 100px 4%;
+}
+
+.trabalho .interface{
+    padding: 30px 0;
+}
+
+.trabalho .btn-contato{
+    text-align: center;
+}
+
+.trabalho .interface h2{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.trabalho .interface span{
+    color: #0066ff;
+}
+
+section .trabalho .flex{
+    gap: 70px;
+}
+
+.trabalho .img-trabalho{
+    color: #424242;
+    margin: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .2s;
+    text-align: center;
+}
+
+.trabalho .img-trabalho:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.482) ;
+}
+
+.img-trabalho h3{
+    font-size: 22px;
+    margin: 15px 0px;
+}
+
+.img-trabalho img{
+    max-width: 300px;
+    max-height:300px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #4a4a4a;
+    border-radius: 15px;
+}
+*/
+
 
 /*ESTILO PORTFÓLIO*/
 section.projeto{
@@ -335,13 +392,13 @@ section.projeto .flex{
         font-size: 1.03em;
         font-weight: 600;
         text-decoration: none;
-        padding-top: 20px;
+        
     
         display: inline-block;
         /* display; inline-block; é necessário para usar a propriedade !trasnform! */
         transition: .2s;
 
-        padding: 40px 0 40px 0;
+        padding: 10px 0 40px 0;
 }
 
 .img-projeto article a:hover{
@@ -601,11 +658,11 @@ footer .footer-p-mobile{
     /* CABEÇALHO */
 
     header .interface{
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
     position: fixed;
     top: 0;
-    width: 100%;
-    height: 90px;
-    background-color: #fff;
     }
 
     header nav.menu-desktop{
@@ -613,12 +670,17 @@ footer .footer-p-mobile{
     }
 
     header nav.menu-mobile{
-        display: none;
+        display: flex;
     }
 
     header div.interface{
         display: flex;
         align-items: left;
+    }
+
+    header nav{
+        background-color: white;
+        position: relative;
     }
 
     /* TOPO */
