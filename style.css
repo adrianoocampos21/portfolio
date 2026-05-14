@@ -13,8 +13,23 @@
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
+/* Cores padrão (Modo Claro) */
+:root {
+    --cor-fundo: #fff;
+    --cor-texto: #424242;
+    --cor-destaque: #0066ff;
+}
+
+/* Cores quando o tema escuro estiver ativo */
+.dark-theme {
+    --cor-fundo: #121212;
+    --cor-texto: #f0f0f0;
+    --cor-destaque: #19cc9f;
+}
+
+
 body{
-    background-color: #fff;
+    background-color: var(--cor-fundo);
     height: 100vh;
     margin: auto;
 }
@@ -28,13 +43,35 @@ body{
     display: flex;
 }
 
+.btn-top {
+    position: fixed;
+    bottom: 30px;      /* Distância do fundo */
+    left: 30px;        /* Distância da lateral esquerda */
+    width: 50px;
+    height: 50px;
+    background-color: #00fe9c; /* Use a cor principal do seu site */
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;     /* Começa escondido */
+    z-index: 1000;     /* Garante que fique acima de tudo */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.btn-top:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+}
+
 .btn-contato button{
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
 
-    color: #fff;
-    background-color: #0066ff;
+    color:  var(--cor-fundo);
+    background-color:  var(--cor-destaque);
     border: 0;
     border-radius: 30px;
     cursor: pointer;
@@ -42,7 +79,7 @@ body{
 }
 
 button:hover, form input[type=submit]:hover{
-    box-shadow: 0px 0px 10px #00ccff;
+    box-shadow: 0px 0px 10px  var(--cor-destaque);
     transform: scale(1.05);
 }
 
@@ -53,8 +90,8 @@ button:hover, form input[type=submit]:hover{
     font-weight: 600;
     text-decoration: none;
 
-    color: #fff;
-    background-color: #0066ff;
+    color:  var(--cor-fundo);
+    background-color:  var(--cor-destaque);
     border: 0;
     border-radius: 30px;
     cursor: pointer;
@@ -62,23 +99,23 @@ button:hover, form input[type=submit]:hover{
 }
 
 .btn-contato-mobile button:hover{
-    box-shadow: 0px 0px 10px #00ccff;
+    box-shadow: 0px 0px 10px  var(--cor-destaque);
     transform: scale(1.05);
 }
 
 h2.titulo{
-    color:#424242;
+    color:var(--cor-texto);
     font-size: 38px;
     text-align: center;
 }
 
 h2{
-    color:#424242;
+    color:var(--cor-texto);
     font-size: 38px;
 }
 
 h2.titulo span{
-    color: #0066ff;
+    color: var(--cor-destaque);
 }
 
 /* ESTILO DO CABEÇALHO */
@@ -100,17 +137,17 @@ header .logo h1{
     font-size: 1.8em;
     font-family: "Passion one", "Poppins", helvetica;
 
-    color: #0066ff;
+    color: var(--cor-destaque);
     line-height: 1.1;
 }
 
 header .logo span{
-    color: #424242;
+    color: var(--cor-texto);
     font-weight: 600;
 }
 
 header a{
-    color: #424242;
+    color: var(--cor-texto);
     font-size: 1.03em;
     font-weight: 600;
     text-decoration: none;
@@ -121,7 +158,7 @@ header a{
 }
 
 header a:hover{
-    color: #0066ff;
+    color: var(--cor-destaque);
     transform: scale(1.07);
 }
 
@@ -151,23 +188,23 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site .txt-topo-site h1{
-    color: #424242;
+    color: var(--cor-texto);
     font-size: 42px;
     line-height: 40px;
 }
 
 .topo-do-site h1 span{
-    color: #0066ff;
+    color: var(--cor-destaque);
 }
 
 .topo-do-site .txt-topo-site p{
-    color: #424242;
+    color: var(--cor-texto);
     margin: 50px 0px;
 }
 
 .img-topo-site img{
     border-radius: 50%;
-    box-shadow: 0px 0px 10px #4a4a4a;
+    box-shadow: 0px 0px 10px var(--cor-texto);
     cursor: pointer;
 }
 
@@ -197,7 +234,7 @@ section .especialidades .flex{
 }
 
 .especialidades .especialidades-box{
-    color: #424242;
+    color: var(--cor-texto);
     padding: 40px;
     border-radius: 20px;
     margin-top: 45px;
@@ -211,7 +248,7 @@ section .especialidades .flex{
 }
 
 .especialidades .especialidades-box i{
-    color: #0066ff;
+    color: var(--cor-destaque);
     font-size: 70px;
 }
 
@@ -235,16 +272,22 @@ section.sobre .flex{
     max-width: 400px;
 
     cursor: pointer;
-    box-shadow: 0px 0px 10px #4a4a4a;
+    box-shadow: 0px 0px 10px var(--cor-texto);
     border-radius: 50%;
 }
 
 .sobre .txt-sobre{
-    color: #424242;
+    color: var(--cor-texto);
+    
+}
+
+.sobre a{
+    color: var(--cor-destaque);
+    
 }
 
 .sobre .txt-sobre h2 span{
-    color: #0066ff;
+    color: var(--cor-destaque);
     display: block;
 }
 
@@ -262,7 +305,7 @@ section.sobre .flex{
     height: 60px;
     border-radius: 50%;
     border: none;
-    background-color: #00ccff;
+    background-color:  var(--cor-destaque);
     font-size: 30px;
 
     cursor: pointer;
@@ -270,74 +313,18 @@ section.sobre .flex{
     transition: .2s;
 }
 
-/* TRABALHOS
-
-section .trabalho{
-    padding: 100px 4%;
-}
-
-.trabalho .interface{
-    padding: 30px 0;
-}
-
-.trabalho .btn-contato{
-    text-align: center;
-}
-
-.trabalho .interface h2{
-    text-align: center;
-    padding-bottom: 10px;
-}
-
-.trabalho .interface span{
-    color: #0066ff;
-}
-
-section .trabalho .flex{
-    gap: 70px;
-}
-
-.trabalho .img-trabalho{
-    color: #424242;
-    margin: 50px;
-    padding: 10px;
-    border-radius: 20px;
-    margin-top: 30px;
-    cursor: pointer;
-    transition: .2s;
-    text-align: center;
-}
-
-.trabalho .img-trabalho:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.482) ;
-}
-
-.img-trabalho h3{
-    font-size: 22px;
-    margin: 15px 0px;
-}
-
-.img-trabalho img{
-    max-width: 300px;
-    max-height:300px;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px #4a4a4a;
-    border-radius: 15px;
-}
-*/
 
 
 /*ESTILO PORTFÓLIO*/
 section.projeto{
     margin: auto;
     padding: 40px 8% 100px 8%;
-    box-shadow: inset 0 0 40px 5px #000000;
-    background-color: #000000ab;
+    box-shadow: inset 0 0 40px 5px  var(--cor-texto);
+    background-color:  var(--cor-texto);
 }
 
 section.projeto h2{
-    color: #fff;
+    color: var(--cor-fundo);
 }
 
 section.projeto .flex{
@@ -371,12 +358,12 @@ section.projeto .flex{
     align-items: center;
     justify-content: center;
 
-    color: #fff;
+    color: var(--cor-fundo);
     font-size: 25px;
     font-weight: 500;
 
     box-shadow: 0 0 40px 10px #64646448;
-    background-color: #000000ea;
+    background-color: var(--cor-texto);
     background-position: absolute;
     width: 360px;
     height: 460px;
@@ -390,7 +377,7 @@ section.projeto .flex{
 }
 
 .img-projeto article a{
-        color: #ffffff;
+        color: var(--cor-fundo);
         font-size: 1.03em;
         font-weight: 600;
         text-decoration: none;
@@ -404,7 +391,7 @@ section.projeto .flex{
 }
 
 .img-projeto article a:hover{
-    color: #0066ff;
+    color: var(--cor-destaque);
     transform: scale(1.07);
 }
 
@@ -427,8 +414,8 @@ form{
 
 form input, form textarea{
     width: 100%;
-    background-color: #424242;
-    color: #fff;
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
     font-size: 16px;
     border: none;
     outline: none;
@@ -441,17 +428,34 @@ form textarea{
     resize: none;
     max-height: 200px;
 
-    color: #fff;
+    color: var(--cor-fundo);
     font-size: 16px;
 }
 
 form input::placeholder, textarea::placeholder{
-    color: #fff;
+    color: var(--cor-fundo);
 }
 
 form .btn-enviar{
     margin-top: 20px;
     text-align: center;
+}
+
+form .btn-download{
+    margin-top: 20px;
+    margin-left: 70px;
+    text-align: center;
+    width: 160px;
+    padding: 12px 0px;
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--cor-fundo);
+    background-color: var(--cor-destaque);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
 }
 
 form input[type=submit]{
@@ -460,8 +464,8 @@ form input[type=submit]{
     font-size: 16px;
     font-weight: 600;
     
-    color: #fff;
-    background-color: #0066ff;
+    color: var(--cor-fundo);
+    background-color: var(--cor-destaque);
     border: 0;
     border-radius: 30px;
     cursor: pointer;
@@ -472,7 +476,7 @@ form input[type=submit]{
 
 footer{
     padding: 20px 4%;
-    box-shadow: inset 0 0 40px 10px #bfbebe4a;
+    box-shadow: inset 0 0 40px 10px  var(--cor-fundo);
 }
 
 footer .flex{
@@ -487,12 +491,12 @@ footer .logo h1{
     font-size: 1.2em;
     font-family: "Passion one", "Poppins", helvetica;
 
-    color: #0066ff;
+    color: var(--cor-destaque);
     line-height: 1.03;
 }
 
 footer .logo span{
-    color: #424242;
+    color: var(--cor-texto);
 }
 
 footer .logo,footer .menu-desktop, footer .btn-social {
@@ -509,7 +513,7 @@ footer nav ul{
 }
 
 footer a{
-    color: #424242;
+    color: var(--cor-texto);
     font-size: 1.0em;
     font-weight: 300;
     text-decoration: none;
@@ -519,7 +523,7 @@ footer a{
 }
 
 footer a:hover{
-    color: #0066ff;
+    color: var(--cor-destaque);
 }
 
 
@@ -528,7 +532,7 @@ footer .btn-social button{
     height: 30px;
     border-radius: 50%;
     border: none;
-    background-color: #00ccff;
+    background-color: var(--cor-destaque);
     font-size: 20px;
 
     cursor: pointer;
@@ -537,7 +541,7 @@ footer .btn-social button{
 }
 
 footer p{
-    color: #424242;
+    color: var(--cor-texto);
 }
 
 footer .footer-p-mobile{
@@ -569,7 +573,7 @@ footer .footer-p-mobile{
     }
 
     h2{
-        color:#424242;
+        color:var(--cor-texto);
         font-size: 30px;
         text-align: center;
     }
@@ -662,7 +666,7 @@ footer .footer-p-mobile{
     header .interface{
     width: 100%;
     height: 70px;
-    background-color: #fff;
+    background-color: var(--cor-fundo);
     }
 
     header nav.menu-desktop{
@@ -679,7 +683,7 @@ footer .footer-p-mobile{
     }
 
     header nav{
-        background-color: white;
+        background-color: var(--cor-fundo);
         position: relative;
     }
 
